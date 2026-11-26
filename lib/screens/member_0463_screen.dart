@@ -19,7 +19,7 @@ class Member0463Screen extends StatelessWidget {
           return Container(
             width: radius * 2,
             height: radius * 2,
-            color: color.withOpacity(0.15),
+            color: color.withValues(alpha: 0.15),
             child: Icon(
               fallbackIcon,
               size: radius,
@@ -35,7 +35,6 @@ class Member0463Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF0D1117),
-
       appBar: AppBar(
         backgroundColor: const Color(0xFF161B22),
         foregroundColor: Colors.cyanAccent,
@@ -47,13 +46,11 @@ class Member0463Screen extends StatelessWidget {
           ),
         ),
       ),
-
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(18),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
             // Profile Name and Photograph
             Container(
               padding: const EdgeInsets.all(16),
@@ -61,24 +58,21 @@ class Member0463Screen extends StatelessWidget {
                 color: const Color(0xFF161B22),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: Colors.cyanAccent.withOpacity(0.5),
+                  color: Colors.cyanAccent.withValues(alpha: 0.5),
                 ),
               ),
               child: Row(
                 children: [
                   buildMemberPhoto(
-                    'assets/images/23IT0463.jpg',
+                    'assets/images/23IT0463.jpeg',
                     Icons.terminal,
                     Colors.cyanAccent,
                     42,
                   ),
-
                   const SizedBox(width: 16),
-
                   const Expanded(
                     child: Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Mr. G. D. S. H. Chandrawansha',
@@ -88,9 +82,7 @@ class Member0463Screen extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-
                         SizedBox(height: 4),
-
                         Text(
                           'ID: 23IT0463  |  ITUM',
                           style: TextStyle(
@@ -116,34 +108,30 @@ class Member0463Screen extends StatelessWidget {
               mainAxisSpacing: 12,
               childAspectRatio: 0.85,
               children: [
-
                 _cyberTile(
                   Icons.location_city,
                   'ADDRESS',
                   'Hingurakgoda, Sri Lanka',
                 ),
-
                 _cyberTile(
                   Icons.alternate_email,
                   'EMAIL',
                   'sahan14hasmitha@gmail.com',
                 ),
-
                 _cyberTile(
                   Icons.school,
                   'QUALIFICATIONS',
                   'NDT in IT - ITUM\n'
-                  'Diploma in Data Center & Network Administrator - VTA\n'
-                  'CCNA\n'
-                  '(Currently Following)',
+                      'Diploma in Data Center & Network Administrator - VTA\n'
+                      'CCNA\n'
+                      '(Currently Following)',
                 ),
-
                 _cyberTile(
                   Icons.computer,
                   'TALENTS',
                   'Network Configuration\n'
-                  'Programming\n'
-                  'Web Development',
+                      'Programming\n'
+                      'Web Development',
                 ),
               ],
             ),
@@ -170,9 +158,7 @@ class Member0463Screen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-
                   SizedBox(height: 10),
-
                   Text(
                     '• Problem Solving\n'
                     '• Analytical Thinking\n'
@@ -203,7 +189,7 @@ class Member0463Screen extends StatelessWidget {
         color: const Color(0xFF161B22),
         borderRadius: BorderRadius.circular(14),
         border: Border.all(
-          color: Colors.cyanAccent.withOpacity(0.25),
+          color: Colors.cyanAccent.withValues(alpha: 0.25),
         ),
       ),
       child: Column(
@@ -215,9 +201,7 @@ class Member0463Screen extends StatelessWidget {
             color: Colors.cyanAccent,
             size: 22,
           ),
-
           const SizedBox(height: 8),
-
           Text(
             title,
             style: const TextStyle(
@@ -226,9 +210,7 @@ class Member0463Screen extends StatelessWidget {
               fontFamily: 'monospace',
             ),
           ),
-
           const SizedBox(height: 4),
-
           Flexible(
             child: SingleChildScrollView(
               child: Text(

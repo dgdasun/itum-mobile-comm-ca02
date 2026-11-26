@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import '../main.dart';
 import 'login_screen.dart';
+import 'member_0463_screen.dart';
 import 'member_0469_screen.dart';
 
 class MemberItem {
@@ -52,11 +53,7 @@ class HomeScreen extends StatelessWidget {
       name: 'Mr. G. D. S. H. Chandrawansha',
       roleTag: 'Dark Cyber-Tech UI',
       accentColor: Colors.cyan,
-      screen: _PendingMemberScreen(
-        name: 'Mr. G. D. S. H. Chandrawansha',
-        regNo: '23IT0463',
-        roleTag: 'Dark Cyber-Tech UI',
-      ),
+      screen: Member0463Screen(),
     ),
     const MemberItem(
       regNo: '23IT0464',
