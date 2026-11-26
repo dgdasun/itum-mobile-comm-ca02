@@ -5,26 +5,25 @@ import '../main.dart';
 class Member0461Screen extends StatelessWidget {
   const Member0461Screen({super.key});
 
-  
-Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, double radius) {
-  return ClipOval(
-    child: Image.asset(
-      assetPath,
-      width: radius * 2,
-      height: radius * 2,
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          width: radius * 2,
-          height: radius * 2,
-          color: color.withOpacity(0.15),
-          child: Icon(fallbackIcon, size: radius, color: color),
-        );
-      },
-    ),
-  );
-}
-
+  Widget buildMemberPhoto(
+      String assetPath, IconData fallbackIcon, Color color, double radius) {
+    return ClipOval(
+      child: Image.asset(
+        assetPath,
+        width: radius * 2,
+        height: radius * 2,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            width: radius * 2,
+            height: radius * 2,
+            color: color.withValues(alpha: 0.15),
+            child: Icon(fallbackIcon, size: radius, color: color),
+          );
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,12 +48,14 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
-                      icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+                      icon:
+                          const Icon(Icons.arrow_back_ios, color: Colors.white),
                       onPressed: () => Navigator.pop(context),
                     ),
                     const Text('23IT0461',
                         style: TextStyle(
-                            color: Colors.white70, fontWeight: FontWeight.bold)),
+                            color: Colors.white70,
+                            fontWeight: FontWeight.bold)),
                     IconButton(
                       icon: Icon(
                         isLiked ? Icons.favorite : Icons.favorite_border,
@@ -93,8 +94,7 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                   icon: Icons.contact_mail,
                   children: const [
                     _InfoLine(label: 'Address', value: 'Kurunegala, Sri Lanka'),
-                    _InfoLine(
-                        label: 'Email', value: '23it0461@itum.mrt.ac.lk'),
+                    _InfoLine(label: 'Email', value: '23it0461@itum.mrt.ac.lk'),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -121,7 +121,8 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                             'Teamwork, Communication, Time Management, Leadership'),
                     _InfoLine(
                         label: 'Special Talents',
-                        value: 'UI/UX Sketching, Classical Dancing, Volunteering'),
+                        value:
+                            'UI/UX Sketching, Classical Dancing, Volunteering'),
                   ],
                 ),
               ],
@@ -140,9 +141,9 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
       width: double.infinity,
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.18),
+        color: Colors.white.withValues(alpha: 0.18),
         borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: Colors.white.withOpacity(0.35)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

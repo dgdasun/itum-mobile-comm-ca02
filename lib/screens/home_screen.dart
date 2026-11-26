@@ -3,7 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import '../main.dart';
 import 'login_screen.dart';
+import 'member_0461_screen.dart';
+import 'member_0462_screen.dart';
 import 'member_0463_screen.dart';
+import 'member_0464_screen.dart';
+import 'member_0465_screen.dart';
+import 'member_0466_screen.dart';
+import 'member_0467_screen.dart';
+import 'member_0468_screen.dart';
 import 'member_0469_screen.dart';
 
 class MemberItem {
@@ -31,22 +38,14 @@ class HomeScreen extends StatelessWidget {
       name: 'Ms. B. M. I. K. Basnayaka',
       roleTag: 'Glassmorphism UI',
       accentColor: Colors.deepPurple,
-      screen: _PendingMemberScreen(
-        name: 'Ms. B. M. I. K. Basnayaka',
-        regNo: '23IT0461',
-        roleTag: 'Glassmorphism UI',
-      ),
+      screen: Member0461Screen(),
     ),
     const MemberItem(
       regNo: '23IT0462',
       name: 'Ms. G. L. Chalani',
       roleTag: 'Interactive TabBar UI',
       accentColor: Colors.pinkAccent,
-      screen: _PendingMemberScreen(
-        name: 'Ms. G. L. Chalani',
-        regNo: '23IT0462',
-        roleTag: 'Interactive TabBar UI',
-      ),
+      screen: Member0462Screen(),
     ),
     const MemberItem(
       regNo: '23IT0463',
@@ -60,55 +59,35 @@ class HomeScreen extends StatelessWidget {
       name: 'Ms. P. G. D. Darshika',
       roleTag: 'Emerald Accordion UI',
       accentColor: Colors.teal,
-      screen: _PendingMemberScreen(
-        name: 'Ms. P. G. D. Darshika',
-        regNo: '23IT0464',
-        roleTag: 'Emerald Accordion UI',
-      ),
+      screen: Member0464Screen(),
     ),
     const MemberItem(
       regNo: '23IT0465',
       name: 'Mr. B. C. M. D. De Silva',
       roleTag: 'Executive Timeline UI',
       accentColor: Colors.indigo,
-      screen: _PendingMemberScreen(
-        name: 'Mr. B. C. M. D. De Silva',
-        regNo: '23IT0465',
-        roleTag: 'Executive Timeline UI',
-      ),
+      screen: Member0465Screen(),
     ),
     const MemberItem(
       regNo: '23IT0466',
       name: 'Mr. U. B. U. A. Deshapriya',
       roleTag: 'Warm Bento Grid UI',
       accentColor: Colors.deepOrange,
-      screen: _PendingMemberScreen(
-        name: 'Mr. U. B. U. A. Deshapriya',
-        regNo: '23IT0466',
-        roleTag: 'Warm Bento Grid UI',
-      ),
+      screen: Member0466Screen(),
     ),
     const MemberItem(
       regNo: '23IT0467',
       name: 'Ms. K. H. M. Dewanga',
       roleTag: 'Editorial Magazine UI',
       accentColor: Colors.brown,
-      screen: _PendingMemberScreen(
-        name: 'Ms. K. H. M. Dewanga',
-        regNo: '23IT0467',
-        roleTag: 'Editorial Magazine UI',
-      ),
+      screen: Member0467Screen(),
     ),
     const MemberItem(
       regNo: '23IT0468',
       name: 'Mr. K. M. G. D. G. Dias',
       roleTag: 'Minimalist Card UI',
       accentColor: Colors.blueGrey,
-      screen: _PendingMemberScreen(
-        name: 'Mr. K. M. G. D. G. Dias',
-        regNo: '23IT0468',
-        roleTag: 'Minimalist Card UI',
-      ),
+      screen: DiasProfile(),
     ),
     const MemberItem(
       regNo: '23IT0469',
@@ -219,40 +198,6 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         },
-      ),
-    );
-  }
-}
-
-class _PendingMemberScreen extends StatelessWidget {
-  const _PendingMemberScreen({
-    required this.name,
-    required this.regNo,
-    required this.roleTag,
-  });
-
-  final String name;
-  final String regNo;
-  final String roleTag;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(name)),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(regNo, style: Theme.of(context).textTheme.titleLarge),
-              const SizedBox(height: 8),
-              Text(roleTag),
-              const SizedBox(height: 16),
-              const Text('This member profile is not available yet.'),
-            ],
-          ),
-        ),
       ),
     );
   }

@@ -3,26 +3,25 @@ import 'package:flutter/material.dart';
 class Member0462Screen extends StatelessWidget {
   const Member0462Screen({super.key});
 
-  
-Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, double radius) {
-  return ClipOval(
-    child: Image.asset(
-      assetPath,
-      width: radius * 2,
-      height: radius * 2,
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          width: radius * 2,
-          height: radius * 2,
-          color: color.withOpacity(0.15),
-          child: Icon(fallbackIcon, size: radius, color: color),
-        );
-      },
-    ),
-  );
-}
-
+  Widget buildMemberPhoto(
+      String assetPath, IconData fallbackIcon, Color color, double radius) {
+    return ClipOval(
+      child: Image.asset(
+        assetPath,
+        width: radius * 2,
+        height: radius * 2,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            width: radius * 2,
+            height: radius * 2,
+            color: color.withValues(alpha: 0.15),
+            child: Icon(fallbackIcon, size: radius, color: color),
+          );
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +52,8 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildMemberPhoto('assets/images/23IT0462.jpeg',
-                      Icons.face_3, const Color(0xFFD81B60), 65),
+                  buildMemberPhoto('assets/images/23IT0462.jpeg', Icons.face_3,
+                      const Color(0xFFD81B60), 65),
                   const SizedBox(height: 16),
                   const Text('Ms. G. L. Chalani',
                       style: TextStyle(
@@ -72,15 +71,14 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                     child: const Column(
                       children: [
                         ListTile(
-                          leading: Icon(Icons.location_on,
-                              color: Color(0xFFD81B60)),
+                          leading:
+                              Icon(Icons.location_on, color: Color(0xFFD81B60)),
                           title: Text('Address'),
                           subtitle: Text('Galle, Southern Province, Sri Lanka'),
                         ),
                         Divider(height: 1),
                         ListTile(
-                          leading:
-                              Icon(Icons.email, color: Color(0xFFD81B60)),
+                          leading: Icon(Icons.email, color: Color(0xFFD81B60)),
                           title: Text('Email Address'),
                           subtitle: Text('23it0462@itum.mrt.ac.lk'),
                         ),
@@ -103,35 +101,35 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
               ],
             ),
             // Tab 3: Skills & Talents
-            Padding(
-              padding: const EdgeInsets.all(20),
+            const Padding(
+              padding: EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text('Soft Skills',
+                  Text('Soft Skills',
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF880E4F))),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10),
                   Wrap(
                     spacing: 8,
                     runSpacing: 8,
-                    children: const [
+                    children: [
                       Chip(label: Text('Active Listening')),
                       Chip(label: Text('Collaboration')),
                       Chip(label: Text('Adaptability')),
                       Chip(label: Text('Presentation Skills')),
                     ],
                   ),
-                  const SizedBox(height: 24),
-                  const Text('Special Talents',
+                  SizedBox(height: 24),
+                  Text('Special Talents',
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF880E4F))),
-                  const SizedBox(height: 10),
-                  const Card(
+                  SizedBox(height: 10),
+                  Card(
                     child: ListTile(
                       leading: Icon(Icons.palette, color: Color(0xFFD81B60)),
                       title: Text('Creative Arts & Handcrafts'),
