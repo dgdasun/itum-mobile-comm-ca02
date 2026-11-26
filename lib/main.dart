@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
+import 'firebase_options.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
-
-// NOTE: Run `flutterfire configure` in terminal to generate firebase_options.dart
-// and uncomment the line below + options in Firebase.initializeApp():
-// import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    // options: DefaultFirebaseOptions.currentPlatform,
+    options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
     ChangeNotifierProvider(
@@ -22,7 +19,7 @@ void main() async {
   );
 }
 
-/// State Management using Provider (tracks auth loading, favorites, and theme)
+/// State Management using Provider (tracks favorites and theme)
 class AppStateProvider extends ChangeNotifier {
   final Set<String> _likedMembers = {};
   bool _isDarkHome = false;

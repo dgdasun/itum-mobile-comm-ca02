@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "216517352469",
+    "project_id": "mobilecommunicationca02",
+    "storage_bucket": "mobilecommunicationca02.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:216517352469:android:b8c6f7c37c4f81cee1821c",
+        "android_client_info": {
+          "package_name": "com.example.group_profile_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "216517352469-1n1js45memgngtgd96rv2bhekj749l53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwepSsdPwj_NyFaX7el7wpKJQ7jDOwAac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "216517352469-1n1js45memgngtgd96rv2bhekj749l53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
