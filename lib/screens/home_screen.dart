@@ -3,14 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 import '../main.dart';
 import 'login_screen.dart';
-import 'member_0461_screen.dart';
-import 'member_0462_screen.dart';
-import 'member_0463_screen.dart';
-import 'member_0464_screen.dart';
-import 'member_0465_screen.dart';
-import 'member_0466_screen.dart';
-import 'member_0467_screen.dart';
-import 'member_0468_screen.dart';
 import 'member_0469_screen.dart';
 
 class MemberItem {
@@ -38,56 +30,88 @@ class HomeScreen extends StatelessWidget {
       name: 'Ms. B. M. I. K. Basnayaka',
       roleTag: 'Glassmorphism UI',
       accentColor: Colors.deepPurple,
-      screen: Member0461Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Ms. B. M. I. K. Basnayaka',
+        regNo: '23IT0461',
+        roleTag: 'Glassmorphism UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0462',
       name: 'Ms. G. L. Chalani',
       roleTag: 'Interactive TabBar UI',
       accentColor: Colors.pinkAccent,
-      screen: Member0462Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Ms. G. L. Chalani',
+        regNo: '23IT0462',
+        roleTag: 'Interactive TabBar UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0463',
       name: 'Mr. G. D. S. H. Chandrawansha',
       roleTag: 'Dark Cyber-Tech UI',
       accentColor: Colors.cyan,
-      screen: Member0463Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Mr. G. D. S. H. Chandrawansha',
+        regNo: '23IT0463',
+        roleTag: 'Dark Cyber-Tech UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0464',
       name: 'Ms. P. G. D. Darshika',
       roleTag: 'Emerald Accordion UI',
       accentColor: Colors.teal,
-      screen: Member0464Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Ms. P. G. D. Darshika',
+        regNo: '23IT0464',
+        roleTag: 'Emerald Accordion UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0465',
       name: 'Mr. B. C. M. D. De Silva',
       roleTag: 'Executive Timeline UI',
       accentColor: Colors.indigo,
-      screen: Member0465Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Mr. B. C. M. D. De Silva',
+        regNo: '23IT0465',
+        roleTag: 'Executive Timeline UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0466',
       name: 'Mr. U. B. U. A. Deshapriya',
       roleTag: 'Warm Bento Grid UI',
       accentColor: Colors.deepOrange,
-      screen: Member0466Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Mr. U. B. U. A. Deshapriya',
+        regNo: '23IT0466',
+        roleTag: 'Warm Bento Grid UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0467',
       name: 'Ms. K. H. M. Dewanga',
       roleTag: 'Editorial Magazine UI',
       accentColor: Colors.brown,
-      screen: Member0467Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Ms. K. H. M. Dewanga',
+        regNo: '23IT0467',
+        roleTag: 'Editorial Magazine UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0468',
       name: 'Mr. K. M. G. D. G. Dias',
       roleTag: 'Minimalist Card UI',
       accentColor: Colors.blueGrey,
-      screen: Member0468Screen(),
+      screen: _PendingMemberScreen(
+        name: 'Mr. K. M. G. D. G. Dias',
+        regNo: '23IT0468',
+        roleTag: 'Minimalist Card UI',
+      ),
     ),
     const MemberItem(
       regNo: '23IT0469',
@@ -114,7 +138,8 @@ class HomeScreen extends StatelessWidget {
     final isDark = appState.isDarkHome;
 
     return Scaffold(
-      backgroundColor: isDark ? const Color(0xFF121212) : const Color(0xFFF4F6FA),
+      backgroundColor:
+          isDark ? const Color(0xFF121212) : const Color(0xFFF4F6FA),
       appBar: AppBar(
         title: const Text('Team Members (9)'),
         backgroundColor: isDark ? const Color(0xFF1F1F1F) : Colors.indigo,
@@ -151,7 +176,7 @@ class HomeScreen extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               leading: CircleAvatar(
                 radius: 26,
-                backgroundColor: member.accentColor.withOpacity(0.15),
+                backgroundColor: member.accentColor.withValues(alpha: 0.15),
                 child: Text(
                   member.regNo.substring(6),
                   style: TextStyle(
@@ -197,6 +222,40 @@ class HomeScreen extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+}
+
+class _PendingMemberScreen extends StatelessWidget {
+  const _PendingMemberScreen({
+    required this.name,
+    required this.regNo,
+    required this.roleTag,
+  });
+
+  final String name;
+  final String regNo;
+  final String roleTag;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(name)),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(regNo, style: Theme.of(context).textTheme.titleLarge),
+              const SizedBox(height: 8),
+              Text(roleTag),
+              const SizedBox(height: 16),
+              const Text('This member profile is not available yet.'),
+            ],
+          ),
+        ),
       ),
     );
   }
