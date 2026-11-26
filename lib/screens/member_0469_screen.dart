@@ -10,26 +10,25 @@ class Member0469Screen extends StatefulWidget {
 class _Member0469ScreenState extends State<Member0469Screen> {
   bool _showDetails = true;
 
-  
-Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, double radius) {
-  return ClipOval(
-    child: Image.asset(
-      assetPath,
-      width: radius * 2,
-      height: radius * 2,
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          width: radius * 2,
-          height: radius * 2,
-          color: color.withOpacity(0.15),
-          child: Icon(fallbackIcon, size: radius, color: color),
-        );
-      },
-    ),
-  );
-}
-
+  Widget buildMemberPhoto(
+      String assetPath, IconData fallbackIcon, Color color, double radius) {
+    return ClipOval(
+      child: Image.asset(
+        assetPath,
+        width: radius * 2,
+        height: radius * 2,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            width: radius * 2,
+            height: radius * 2,
+            color: color.withValues(alpha: 0.15),
+            child: Icon(fallbackIcon, size: radius, color: color),
+          );
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +55,8 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    buildMemberPhoto('assets/images/23IT0469.jpg',
-                        Icons.code, Colors.white, 46),
+                    buildMemberPhoto('assets/images/23IT0469.jpg', Icons.code,
+                        Colors.white, 46),
                     const SizedBox(height: 8),
                     const Text('23IT0469 • Full-Stack & Mobile Developer',
                         style: TextStyle(color: Colors.white70, fontSize: 12)),
@@ -79,22 +78,20 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                     child: const Column(
                       children: [
                         ListTile(
-                          leading:
-                              Icon(Icons.badge, color: Color(0xFF0D47A1)),
+                          leading: Icon(Icons.badge, color: Color(0xFF0D47A1)),
                           title: Text('Full Name & Reg No'),
                           subtitle: Text('Mr. D. G. D. Dilshan (23IT0469)'),
                         ),
                         Divider(height: 1),
                         ListTile(
-                          leading: Icon(Icons.location_on,
-                              color: Color(0xFF0D47A1)),
+                          leading:
+                              Icon(Icons.location_on, color: Color(0xFF0D47A1)),
                           title: Text('Address'),
                           subtitle: Text('Western Province, Sri Lanka'),
                         ),
                         Divider(height: 1),
                         ListTile(
-                          leading:
-                              Icon(Icons.email, color: Color(0xFF0D47A1)),
+                          leading: Icon(Icons.email, color: Color(0xFF0D47A1)),
                           title: Text('Email'),
                           subtitle: Text('23it0469@itum.mrt.ac.lk'),
                         ),
@@ -132,11 +129,13 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                             Text(
                                 '• National Diploma in Technology in IT – Institute of Technology, University of Moratuwa (ITUM)'),
                             SizedBox(height: 6),
-                            Text('• Diploma in Information Technology & Computer Diploma'),
+                            Text(
+                                '• Diploma in Information Technology & Computer Diploma'),
                             SizedBox(height: 6),
                             Text('• Diploma in English'),
                             SizedBox(height: 6),
-                            Text('• G.C.E. Advanced Level (Mathematics Stream) & G.C.E. Ordinary Level'),
+                            Text(
+                                '• G.C.E. Advanced Level (Mathematics Stream) & G.C.E. Ordinary Level'),
                           ],
                         ),
                       ),
@@ -159,10 +158,10 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF0D47A1))),
                   const SizedBox(height: 8),
-                  Wrap(
+                  const Wrap(
                     spacing: 8,
                     runSpacing: 8,
-                    children: const [
+                    children: [
                       Chip(
                         avatar: Icon(Icons.web, size: 18),
                         label: Text('Full-Stack Web & App Development'),
