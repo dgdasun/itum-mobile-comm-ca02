@@ -53,7 +53,7 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildMemberPhoto('assets/images/23IT0462.jpg',
+                  buildMemberPhoto('assets/images/23IT0462.jpeg',
                       Icons.face_3, const Color(0xFFD81B60), 65),
                   const SizedBox(height: 16),
                   const Text('Ms. G. L. Chalani',
