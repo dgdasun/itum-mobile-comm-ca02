@@ -77,15 +77,17 @@ class Member0461Screen extends StatelessWidget {
                 ),
                 const SizedBox(height: 14),
                 const Text(
-                  'Ms. B. M. I. K. Basnayaka',
+                  'Idusha K. Basnayaka',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 23,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
+                const SizedBox(height: 4),
                 const Text(
-                  'Undergraduate – ITUM (23IT0461)',
+                  'Quality Assurance (QA) Intern | IT Undergraduate (23IT0461)',
+                  textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.white70, fontSize: 14),
                 ),
                 const SizedBox(height: 24),
@@ -93,36 +95,154 @@ class Member0461Screen extends StatelessWidget {
                   title: 'Contact Information',
                   icon: Icons.contact_mail,
                   children: const [
-                    _InfoLine(label: 'Address', value: 'Kurunegala, Sri Lanka'),
-                    _InfoLine(label: 'Email', value: '23it0461@itum.mrt.ac.lk'),
+                    _InfoLine(
+                        label: 'Phone',
+                        value: '077-4305801 / 070-5810844 (WhatsApp)'),
+                    _InfoLine(
+                        label: 'Personal Email',
+                        value: 'idushabasnayaka@gmail.com'),
+                    _InfoLine(
+                        label: 'University Email',
+                        value: '23it0461@itum.mrt.ac.lk'),
+                    _InfoLine(label: 'GitHub', value: 'Idusha-Ikb'),
+                    _InfoLine(
+                        label: 'LinkedIn',
+                        value: 'www.linkedin.com/in/idusha-basnayaka-54bb1535b'),
+                    _InfoLine(
+                        label: 'Address',
+                        value: 'No.218, "Nandana", Mudagammana, Hatharaliyadda'),
+                    _InfoLine(label: 'Region', value: 'Kurunegala, Sri Lanka'),
                   ],
                 ),
                 const SizedBox(height: 16),
                 _glassCard(
-                  title: 'Academic Qualifications',
+                  title: 'Summary',
+                  icon: Icons.person_outline,
+                  children: const [
+                    Text(
+                      'Motivated IT undergraduate with a strong interest in Software Quality Assurance and Software Testing. Currently studying Software Quality Control as part of my university curriculum, with a foundational understanding of software development and web technologies. Eager to learn software testing methodologies, identify defects and contribute to delivering reliable, high-quality software. A quick learner with good problem-solving, communication, and teamwork skills, seeking an opportunity to develop practical experience in QA engineering.',
+                      style: TextStyle(
+                          color: Colors.white, fontSize: 14, height: 1.4),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                _glassCard(
+                  title: 'Education',
                   icon: Icons.school,
                   children: const [
                     _InfoLine(
-                        label: 'Degree',
-                        value: 'National Diploma in Technology (IT) - ITUM'),
+                        label: '2026 - Present',
+                        value:
+                            'Diploma in Information Technology – Institute Of Technology, University Of Moratuwa'),
                     _InfoLine(
-                        label: 'A/L & O/L',
-                        value: 'G.C.E. Advanced Level & Ordinary Level'),
+                        label: '2020 - 2023',
+                        value:
+                            "St. Anthony's Girls' College, Kandy (G.C.E A/Ls 2022 – Combined Mathematics: C, Chemistry: C, Physics: S)"),
+                    _InfoLine(
+                        label: '2014 - 2019',
+                        value:
+                            "Sujatha Girls' College, Galagedara, Kandy (G.C.E O/Ls 2019 – 8 A, 1 B)"),
                   ],
                 ),
                 const SizedBox(height: 16),
                 _glassCard(
-                  title: 'Soft Skills & Special Talents',
+                  title: 'Experience',
+                  icon: Icons.work,
+                  children: const [
+                    _InfoLine(
+                        label: 'Dec 2023 - Oct 2024',
+                        value:
+                            'Intern – Regional Development Bank, Hatharaliyadda'),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                _glassCard(
+                  title: 'Technical Skills',
+                  icon: Icons.code,
+                  children: const [
+                    _InfoLine(
+                        label: 'QA & Testing',
+                        value:
+                            'Software Testing & Quality Assurance, SDLC, Software Quality Control, Test Cases & Test Scenarios'),
+                    _InfoLine(
+                        label: 'Programming',
+                        value: 'HTML, CSS, JavaScript, Python, Java, React'),
+                    _InfoLine(label: 'Database', value: 'MySQL'),
+                    _InfoLine(label: 'Version Control', value: 'Git and GitHub'),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                _glassCard(
+                  title: 'Professional Skills & Special Talents',
                   icon: Icons.auto_awesome,
                   children: const [
                     _InfoLine(
-                        label: 'Soft Skills',
+                        label: 'Core Strengths',
                         value:
-                            'Teamwork, Communication, Time Management, Leadership'),
+                            'Problem-solving & analytical thinking, Communication & teamwork, Time management, Quick learning & adaptability'),
                     _InfoLine(
                         label: 'Special Talents',
                         value:
                             'UI/UX Sketching, Classical Dancing, Volunteering'),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                _glassCard(
+                  title: 'Projects',
+                  icon: Icons.build,
+                  children: const [
+                    _InfoLine(
+                        label: 'SecureTrack SL (Final-Year Project)',
+                        value:
+                            'IoT Container Monitoring System – Mobile Application Developer (Flutter)'),
+                    _InfoLine(
+                        label: 'Highlights',
+                        value:
+                            'Cross-platform Flutter/Dart portals for Field Inspectors & Truck Drivers; RFID container unlocking, IoT device registration, driver route monitoring, and Spring Boot REST API integration for real-time telemetry.'),
+                    _InfoLine(
+                        label: 'Tech Stack',
+                        value:
+                            'React.js, Java, Spring Boot, Flutter, Dart, REST APIs, IoT Integration'),
+                    _InfoLine(
+                        label: 'Mini Projects',
+                        value:
+                            'Personal Portfolio Website (React.js, HTML, CSS, JavaScript) • Simple Calculator (HTML, CSS, JavaScript)'),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                _glassCard(
+                  title: 'Certifications',
+                  icon: Icons.verified,
+                  children: const [
+                    _InfoLine(
+                        label: 'University Of Moratuwa',
+                        value:
+                            'Python for Beginners Online Course • Web Design for Beginners Online Course'),
+                    _InfoLine(
+                        label: 'Simplilearn Academy',
+                        value: 'Java for Beginners Online Course'),
+                    _InfoLine(
+                        label: 'Royal ICT Institute',
+                        value: 'IT & MS Office 2019 Specialist Course'),
+                    _InfoLine(
+                        label: 'Open University, Polgolla - Kandy',
+                        value: 'Short Course in Listening & Speech'),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                _glassCard(
+                  title: 'References',
+                  icon: Icons.people,
+                  children: const [
+                    _InfoLine(
+                        label: 'Mr. Sunil Rathnayaka',
+                        value:
+                            "Chemistry Teacher (Retired), Girls' High School - Kandy • Phone: 077-212-7912"),
+                    _InfoLine(
+                        label: 'Ms. Wathsala Bandara',
+                        value:
+                            'Lecturer at IT Division, ITUM • Phone: 071-519-1223'),
                   ],
                 ),
               ],
