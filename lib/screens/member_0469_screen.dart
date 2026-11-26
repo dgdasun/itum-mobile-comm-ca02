@@ -10,26 +10,25 @@ class Member0469Screen extends StatefulWidget {
 class _Member0469ScreenState extends State<Member0469Screen> {
   bool _showDetails = true;
 
-  
-Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, double radius) {
-  return ClipOval(
-    child: Image.asset(
-      assetPath,
-      width: radius * 2,
-      height: radius * 2,
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          width: radius * 2,
-          height: radius * 2,
-          color: color.withOpacity(0.15),
-          child: Icon(fallbackIcon, size: radius, color: color),
-        );
-      },
-    ),
-  );
-}
-
+  Widget buildMemberPhoto(
+      String assetPath, IconData fallbackIcon, Color color, double radius) {
+    return ClipOval(
+      child: Image.asset(
+        assetPath,
+        width: radius * 2,
+        height: radius * 2,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            width: radius * 2,
+            height: radius * 2,
+            color: color.withValues(alpha: 0.15),
+            child: Icon(fallbackIcon, size: radius, color: color),
+          );
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +42,7 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
             backgroundColor: const Color(0xFF0D47A1),
             foregroundColor: Colors.white,
             flexibleSpace: FlexibleSpaceBar(
-              title: const Text('D. G. D. Dilshan',
+              title: const Text('D. G. Dasun Dilshan',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
               background: Container(
                 decoration: const BoxDecoration(
@@ -56,10 +55,10 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    buildMemberPhoto('assets/images/23IT0469.jpg',
-                        Icons.code, Colors.white, 46),
+                    buildMemberPhoto('assets/images/23IT0469.jpg', Icons.code,
+                        Colors.white, 46),
                     const SizedBox(height: 8),
-                    const Text('23IT0469 • Full-Stack & Mobile Developer',
+                    const Text('23IT0469 • Software Engineer Intern',
                         style: TextStyle(color: Colors.white70, fontSize: 12)),
                     const SizedBox(height: 24),
                   ],
@@ -79,24 +78,22 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                     child: const Column(
                       children: [
                         ListTile(
-                          leading:
-                              Icon(Icons.badge, color: Color(0xFF0D47A1)),
+                          leading: Icon(Icons.badge, color: Color(0xFF0D47A1)),
                           title: Text('Full Name & Reg No'),
-                          subtitle: Text('Mr. D. G. D. Dilshan (23IT0469)'),
-                        ),
-                        Divider(height: 1),
-                        ListTile(
-                          leading: Icon(Icons.location_on,
-                              color: Color(0xFF0D47A1)),
-                          title: Text('Address'),
-                          subtitle: Text('Western Province, Sri Lanka'),
+                          subtitle: Text('D. G. Dasun Dilshan (23IT0469)'),
                         ),
                         Divider(height: 1),
                         ListTile(
                           leading:
-                              Icon(Icons.email, color: Color(0xFF0D47A1)),
+                              Icon(Icons.location_on, color: Color(0xFF0D47A1)),
+                          title: Text('Address'),
+                          subtitle: Text('Pathum Stores, Oluara, Walasmulla'),
+                        ),
+                        Divider(height: 1),
+                        ListTile(
+                          leading: Icon(Icons.email, color: Color(0xFF0D47A1)),
                           title: Text('Email'),
-                          subtitle: Text('23it0469@itum.mrt.ac.lk'),
+                          subtitle: Text('dasundilshan376@gmail.com'),
                         ),
                       ],
                     ),
@@ -130,13 +127,20 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                                '• National Diploma in Technology in IT – Institute of Technology, University of Moratuwa (ITUM)'),
+                                '• Diploma in Information Technology – Institute of Technology, University of Moratuwa (Jan 2025 – Present)'),
                             SizedBox(height: 6),
-                            Text('• Diploma in Information Technology & Computer Diploma'),
+                            Text(
+                                '• G.C.E. Advanced Level (2022) & G.C.E. Ordinary Level (2018) – H/Walasmulla National School'),
                             SizedBox(height: 6),
-                            Text('• Diploma in English'),
+                            Text('• AI/ML Engineer – SLIIT (2026)'),
                             SizedBox(height: 6),
-                            Text('• G.C.E. Advanced Level (Mathematics Stream) & G.C.E. Ordinary Level'),
+                            Text(
+                                '• Cisco NetAcad: JavaScript Essentials 1, Python Essentials 1, Introduction to Modern AI & OS Basics (2026)'),
+                            SizedBox(height: 6),
+                            Text(
+                                '• Google AI Essentials – Google & Coursera (2025)'),
+                            SizedBox(height: 6),
+                            Text('• Python for Beginners – CODL, UoM (2023)'),
                           ],
                         ),
                       ),
@@ -148,10 +152,10 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF0D47A1))),
                   const SizedBox(height: 10),
-                  _skillBar('Team Leadership & Git Collaboration', 0.92),
-                  _skillBar('Problem Solving & Analytical Thinking', 0.90),
-                  _skillBar('Communication & Presentation', 0.88),
-                  _skillBar('Time Management', 0.85),
+                  _skillBar('Problem-Solving & Analytical Thinking', 0.92),
+                  _skillBar('Teamwork & Group Leadership', 0.90),
+                  _skillBar('Communication & Collaboration', 0.88),
+                  _skillBar('Time Management & Fast Learning', 0.86),
                   const SizedBox(height: 16),
                   const Text('Special Talents',
                       style: TextStyle(
@@ -159,21 +163,21 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
                           fontWeight: FontWeight.bold,
                           color: Color(0xFF0D47A1))),
                   const SizedBox(height: 8),
-                  Wrap(
+                  const Wrap(
                     spacing: 8,
                     runSpacing: 8,
-                    children: const [
+                    children: [
                       Chip(
-                        avatar: Icon(Icons.web, size: 18),
-                        label: Text('Full-Stack Web & App Development'),
+                        avatar: Icon(Icons.smart_toy, size: 18),
+                        label: Text('VERTEX 2025 Robotics Finalist (ITUM)'),
                       ),
                       Chip(
-                        avatar: Icon(Icons.brush, size: 18),
-                        label: Text('Vector Illustration & UI Design'),
+                        avatar: Icon(Icons.code, size: 18),
+                        label: Text('Full-Stack Web Dev (Spring Boot & React)'),
                       ),
                       Chip(
-                        avatar: Icon(Icons.memory, size: 18),
-                        label: Text('Microcontroller Programming'),
+                        avatar: Icon(Icons.psychology, size: 18),
+                        label: Text('AI/ML & LLM Integration (Claude API)'),
                       ),
                     ],
                   ),
