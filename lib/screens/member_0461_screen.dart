@@ -17,7 +17,7 @@ class Member0461Screen extends StatelessWidget {
           return Container(
             width: radius * 2,
             height: radius * 2,
-            color: color.withOpacity(0.15),
+            color: color.withValues(alpha: 0.15),
             child: Icon(fallbackIcon, size: radius, color: color),
           );
         },
@@ -99,7 +99,11 @@ class Member0461Screen extends StatelessWidget {
                         label: 'Phone',
                         value: '077-4305801 / 070-5810844 (WhatsApp)'),
                     _InfoLine(
-                        label: 'Email', value: 'idushabasnayaka@gmail.com'),
+                        label: 'Personal Email',
+                        value: 'idushabasnayaka@gmail.com'),
+                    _InfoLine(
+                        label: 'University Email',
+                        value: '23it0461@itum.mrt.ac.lk'),
                     _InfoLine(label: 'GitHub', value: 'Idusha-Ikb'),
                     _InfoLine(
                         label: 'LinkedIn',
@@ -107,6 +111,7 @@ class Member0461Screen extends StatelessWidget {
                     _InfoLine(
                         label: 'Address',
                         value: 'No.218, "Nandana", Mudagammana, Hatharaliyadda'),
+                    _InfoLine(label: 'Region', value: 'Kurunegala, Sri Lanka'),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -169,13 +174,17 @@ class Member0461Screen extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 _glassCard(
-                  title: 'Professional Skills',
+                  title: 'Professional Skills & Special Talents',
                   icon: Icons.auto_awesome,
                   children: const [
                     _InfoLine(
                         label: 'Core Strengths',
                         value:
                             'Problem-solving & analytical thinking, Communication & teamwork, Time management, Quick learning & adaptability'),
+                    _InfoLine(
+                        label: 'Special Talents',
+                        value:
+                            'UI/UX Sketching, Classical Dancing, Volunteering'),
                   ],
                 ),
                 const SizedBox(height: 16),
@@ -252,9 +261,9 @@ class Member0461Screen extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.18),
+        color: Colors.white.withValues(alpha: 0.18),
         borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: Colors.white.withOpacity(0.35)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

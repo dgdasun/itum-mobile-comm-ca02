@@ -1,28 +1,27 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-class Member0464Screen extends StatelessWidget {
-  const Member0464Screen({super.key});
+class Member0467Screen extends StatelessWidget {
+  const Member0467Screen({super.key});
 
-  
-Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, double radius) {
-  return ClipOval(
-    child: Image.asset(
-      assetPath,
-      width: radius * 2,
-      height: radius * 2,
-      fit: BoxFit.cover,
-      errorBuilder: (context, error, stackTrace) {
-        return Container(
-          width: radius * 2,
-          height: radius * 2,
-          color: color.withOpacity(0.15),
-          child: Icon(fallbackIcon, size: radius, color: color),
-        );
-      },
-    ),
-  );
-}
-
+  Widget buildMemberPhoto(
+      String assetPath, IconData fallbackIcon, Color color, double radius) {
+    return ClipOval(
+      child: Image.asset(
+        assetPath,
+        width: radius * 2,
+        height: radius * 2,
+        fit: BoxFit.cover,
+        errorBuilder: (context, error, stackTrace) {
+          return Container(
+            width: radius * 2,
+            height: radius * 2,
+            color: color.withValues(alpha: 0.15),
+            child: Icon(fallbackIcon, size: radius, color: color),
+          );
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,8 +43,8 @@ Widget buildMemberPhoto(String assetPath, IconData fallbackIcon, Color color, do
             ),
             child: Column(
               children: [
-                buildMemberPhoto('assets/images/23IT0467.jpg',
-                    Icons.eco, Colors.white, 52),
+                buildMemberPhoto(
+                    'assets/images/23IT0467.jpeg', Icons.eco, Colors.white, 52),
                 const SizedBox(height: 12),
                 const Text('Ms. K H M Devanga',
                     style: TextStyle(

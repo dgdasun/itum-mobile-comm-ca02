@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class DiasProfile extends StatefulWidget {
@@ -28,12 +27,8 @@ class _DiasProfileState extends State<DiasProfile> {
         actions: [
           IconButton(
             icon: Icon(
-              isFavourite
-                  ? Icons.favorite
-                  : Icons.favorite_border,
-              color: isFavourite
-                  ? Colors.pinkAccent
-                  : Colors.white,
+              isFavourite ? Icons.favorite : Icons.favorite_border,
+              color: isFavourite ? Colors.pinkAccent : Colors.white,
             ),
             onPressed: () {
               setState(() {
@@ -48,7 +43,6 @@ class _DiasProfileState extends State<DiasProfile> {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-
             // Profile Header
             Container(
               width: double.infinity,
@@ -67,7 +61,6 @@ class _DiasProfileState extends State<DiasProfile> {
               ),
               child: Column(
                 children: [
-
                   // Profile Photograph
                   Container(
                     padding: const EdgeInsets.all(4),
@@ -77,7 +70,7 @@ class _DiasProfileState extends State<DiasProfile> {
                     ),
                     child: ClipOval(
                       child: Image.asset(
-                        'assets/images/dias.jpg',
+                        'assets/images/23IT0468.jpeg',
                         width: 120,
                         height: 120,
                         fit: BoxFit.cover,
@@ -340,11 +333,11 @@ class _DiasProfileState extends State<DiasProfile> {
         color: cardColor,
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: accent.withOpacity(0.2),
+          color: accent.withValues(alpha: 0.2),
         ),
         boxShadow: [
           BoxShadow(
-            color: accent.withOpacity(0.07),
+            color: accent.withValues(alpha: 0.07),
             blurRadius: 15,
           ),
         ],
@@ -388,7 +381,7 @@ class _DiasProfileState extends State<DiasProfile> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.deepPurple.withOpacity(0.3),
+              color: Colors.deepPurple.withValues(alpha: 0.3),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(
@@ -437,10 +430,10 @@ class _DiasProfileState extends State<DiasProfile> {
         vertical: 10,
       ),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.12),
+        color: color.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(25),
         border: Border.all(
-          color: color.withOpacity(0.4),
+          color: color.withValues(alpha: 0.4),
         ),
       ),
       child: Row(
